@@ -50,4 +50,7 @@ df <- rbindlist(df)
 
 # No idea how, but I have some duplications.
 df <- subset(df, !duplicated(subset(df, select=c(title))))
+
+
 write_csv(df, "imdb_top_250.csv")
+saveRDS(df, "imdb_top_250.rds")
